@@ -1,0 +1,24 @@
+<launch>
+  <arg name="ns" default="network_camera" />
+  <arg name="ip" default="http://192.168.1.40" />
+  <arg name="port" default="81" />
+  <arg name="user" default="admin" />
+  <arg name="pass" default="12345" />
+  <arg name="show_image" default="true" />
+
+
+  <param name="ns" value="$(arg ns)"/>
+
+  <rosparam param="ip" subst_value="true" ns="$(arg ns)">$(arg ip)</rosparam>
+  <rosparam param="port" subst_value="true" ns="$(arg ns)">$(arg port)</rosparam>
+  <rosparam param="user" subst_value="true" ns="$(arg ns)">$(arg user)</rosparam>
+  <rosparam param="pass" subst_value="true" ns="$(arg ns)">$(arg pass)</rosparam>
+  <rosparam param="show_image" subst_value="false" ns="$(arg ns)">$(arg show_image)</rosparam>
+
+
+  <node pkg="network_camera" type="network_streamer" name="network_streamer" output="screen" ns="$(arg ns)" />
+  <node pkg="network_camera" type="camera_info.py" name="camera_info" output="screen" ns="$(arg ns)" args="$(find network_camera)/etc/ost.yaml" />
+  <remap to="/network_camera/camera_info" from="/camera/camera_info"/>
+  <remap to="/network_camera/image" from="/camera/image_raw" />
+  <include file="$(find ar_pose)/demo/demo_single_cms.launch" />
+</launch>

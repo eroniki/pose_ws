@@ -1,0 +1,8 @@
+prefix=/home/murat/pose_ws/devel
+
+Name: ar_pose
+Description: Description of ar_pose
+Version: 0.0.0
+Cflags: -I/home/murat/pose_ws/devel/include -I/home/murat/pose_ws/src/ar_tools/ar_pose/include
+Libs: -L/home/murat/pose_ws/devel/lib 
+Requires: roscpp geometry_msgs visualization_msgs artoolkit message_runtime

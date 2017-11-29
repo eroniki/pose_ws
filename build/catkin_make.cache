@@ -1,0 +1,2 @@
+ar_tools/ar_pose:ar_tools/ar_tools:ar_tools/artoolkit:network_camera:object_tracking_wireless_cam
+-DCATKIN_DEVEL_PREFIX=/home/murat/pose_ws/devel -DCMAKE_INSTALL_PREFIX=/home/murat/pose_ws/install -G Unix Makefiles
