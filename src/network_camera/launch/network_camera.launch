@@ -20,5 +20,5 @@
   <node pkg="network_camera" type="camera_info.py" name="camera_info" output="screen" ns="$(arg ns)" args="$(find network_camera)/etc/ost.yaml" />
   <remap to="/network_camera/camera_info" from="/camera/camera_info"/>
   <remap to="/network_camera/image" from="/camera/image_raw" />
-  <include file="$(find network_camera)/demo_single_cms.launch" />
+  <include file="$(find network_camera)/launch/demo_single_cms.launch" />
 </launch>
