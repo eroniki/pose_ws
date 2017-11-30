@@ -1,8 +1,0 @@
-prefix=/home/murat/pose_ws/devel
-
-Name: object_tracking_wireless_cam
-Description: Description of object_tracking_wireless_cam
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/murat/pose_ws/devel/lib 
-Requires: 

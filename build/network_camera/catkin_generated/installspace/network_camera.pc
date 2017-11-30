@@ -1,8 +1,0 @@
-prefix=/home/murat/pose_ws/install
-
-Name: network_camera
-Description: Description of network_camera
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/murat/pose_ws/install/lib 
-Requires: 
