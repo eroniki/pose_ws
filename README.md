@@ -19,7 +19,10 @@ wstool:
 ```
 cd ~
 git clone https://github.com/eroniki/pose_ws
-cd pose_ws
-wstool update -t src
+cd pose_ws/src
+roslocate info ar_tools | wstool merge -
+wstool update
+rosdep install -i --from-paths ar_tools
+cd ..
 catkin_make
 ```
